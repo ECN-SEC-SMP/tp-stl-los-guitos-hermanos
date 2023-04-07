@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <list>
 
 using namespace std;
 
@@ -196,6 +197,22 @@ int main()
     cout << "Virguled : ";
 
     afficheString(vs1);
+
+    list<int> l1;
+
+    for(int i=0; i<7; i++)
+        l1.push_back(10*i);
+
+    list<int>::iterator it = l1.begin();
+    advance (it, 3);
+    l1.erase(it);
+
+    cout << endl;
+
+    for (auto x : l1)
+    {
+        cout << x << " ";
+    }
 
     return 0;
 }
