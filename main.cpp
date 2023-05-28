@@ -9,12 +9,18 @@
 #include <iostream>
 
 /******* Project include ******/
+#include "Cell.hpp"
 
 /******* Espace de nommage ****/
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!" << endl;
+    cout << "Hello World!" << endl;
+    Cell c1 = Cell();
+    c1.add_objective(RED);
+    Cell c2 = Cell();
+    c2.add_wall(Cell::WALL_LEFT | Cell::WALL_DOWN);
+
     return 0;
 }
